@@ -204,6 +204,17 @@ fun VotingAction(
 @Composable
 fun ArrowButton(onClickAction: () -> Unit, arrowResourceId: Int) {
   //TODO add your code here
+  IconButton(
+    onClick = onClickAction,
+    modifier = Modifier.size(30.dp)
+  ) {
+    Icon(
+      imageVector = ImageVector.vectorResource(arrowResourceId),
+      contentDescription = stringResource(id = R.string.upvote),
+      modifier = Modifier.size(20.dp),
+      tint = Color.Gray
+    )
+  }
 }
 
 @Composable
